@@ -24,9 +24,11 @@ export default defineConfig({
     esbuildOptions: {
       target: 'esnext',
     }
+
   },
   server: {
     port: 10003,
+    host: true,
     proxy: {
       '/api/': {
         target: 'http://10.0.44.34:5000', // 开发环境
