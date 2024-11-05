@@ -28,3 +28,14 @@ const translate = (nums, k) => {
 console.log(translate([-1], 2));
 
 // reverse([1, 2, 3, 4, 5, 6, 7], 2, 5);
+
+const rotate = function(nums, k) {
+  k %= nums.length;
+  if (k === 0) {
+    return;
+  }
+  nums.unshift(...nums.splice(-k, k));
+  return nums;
+};
+
+console.log(rotate([1, 2, 3, 4, 5, 6, 7], 2));
