@@ -1,6 +1,6 @@
 import { createLinkedList, linkedListLoggers, Node } from '../utils/index.mjs';
 
-const head = createLinkedList([1, 2, 3, 4, 5]);
+const head = createLinkedList([]);
 
 linkedListLoggers(head);
 
@@ -11,6 +11,9 @@ linkedListLoggers(head);
  */
 
 const rotateList = (head, k) => {
+  if (!head || k === 0) {
+    return head
+  }
   let pointer = head;
   let len = 1;
   while (pointer.next) {
@@ -22,18 +25,18 @@ const rotateList = (head, k) => {
   pointer = pointer.next;
 
   let count = 1;
-  let n = len - k % len;
+  let n = len - (k % len);
   while (pointer.next && count < n) {
     pointer = pointer.next;
     count++;
   }
 
-  const newHead = pointer.next;
+  head = pointer.next;
   pointer.next = null;
 
-  return newHead
+  return head;
 };
 
-const newHead = rotateList(head, 5);
+const newHead = rotateList(head, 2);
 
 linkedListLoggers(newHead);
