@@ -30,6 +30,11 @@ export default defineConfig({
     port: 10003,
     host: true,
     proxy: {
+      '/local/': {
+        target: 'http://127.0.0.1:8080',
+        changeOrigin: true,
+        rewrite: path => path.replace('/local/', '')
+      },
       '/api/': {
         target: 'http://10.0.44.34:5000', // 开发环境
         ws: true,

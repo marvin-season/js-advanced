@@ -275,6 +275,9 @@ importers:
       highlight.js:
         specifier: ^11.9.0
         version: 11.10.0
+      hls.js:
+        specifier: ^1.5.17
+        version: 1.5.17
       immer:
         specifier: ^10.0.4
         version: 10.1.1
@@ -4835,6 +4838,9 @@ packages:
   highlight.js@11.10.0:
     resolution: {integrity: sha512-SYVnVFswQER+zu1laSya563s+F8VDGt7o35d4utbamowvUNLLMovFqwCLSocpZTz3MgaSRA1IbqRWZv97dtErQ==}
     engines: {node: '>=12.0.0'}
+
+  hls.js@1.5.17:
+    resolution: {integrity: sha512-wA66nnYFvQa1o4DO/BFgLNRKnBTVXpNeldGRBJ2Y0SvFtdwvFKCbqa9zhHoZLoxHhZ+jYsj3aIBkWQQCPNOhMw==}
 
   hoist-non-react-statics@3.3.2:
     resolution: {integrity: sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==}
@@ -14051,6 +14057,8 @@ snapshots:
   headers-polyfill@4.0.3: {}
 
   highlight.js@11.10.0: {}
+
+  hls.js@1.5.17: {}
 
   hoist-non-react-statics@3.3.2:
     dependencies:
