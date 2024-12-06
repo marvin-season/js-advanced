@@ -1,3 +1,6 @@
+import rl from "readline";
+
+
 export class Node {
     constructor(value) {
         this.value = value;
@@ -24,3 +27,10 @@ export const linkedListLoggers = (head) => {
     }
     console.log("🚀  ", r + 'null')
 }
+
+
+const rli = rl.createInterface({ input: process.stdin });
+const asyncIter = rli[Symbol.asyncIterator]();
+export const readLine = async () => {
+    return (await asyncIter.next()).value;
+};
